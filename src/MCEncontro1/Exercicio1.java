@@ -49,18 +49,14 @@ public class Exercicio1 {
         String numbersFound = "";
         boolean found = false;
 
-        for (int i = 0; i < vector.length; i++) {
-            System.out.print(vector[i] + " ");
-        }
-
         for (int i = 0; i < vector.length - 1; i++) {
             int count = 1;
             for (int j = 0; j < vector.length; j++) {
-                if (j < i && vector[i] == vector[j]) {
-                    break;
-                }
+                
                 if (j > i && vector[i] == vector[j]) {
                     count++;
+                }if (j < i && vector[i] == vector[j]) {
+                    break;
                 }
             }
             if (count == nTimes) {
